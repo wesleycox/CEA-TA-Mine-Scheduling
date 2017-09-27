@@ -1,0 +1,9 @@
+package mines.ea.op.gene;
+
+/**
+ * Possible crossover methods.
+ */
+public enum CrossoverKind {
+	SINGLE_POINT, UNIFORM, SAGA, LIST_SINGLE_POINT, AVERAGE, LINEAR, WHOLE_ARITHMETIC, BLX_A, HEURISTIC, QUADRATIC, LAPLACE, GEOMETRIC,
+	SIMULATED_BINARY, MIN_MAX, PARTIAL_MATCH
+}
