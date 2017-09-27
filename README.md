@@ -82,6 +82,14 @@ Any deviation from this format will result in error.
 Notes:
 
 Please ignore the weird class names and package structure. The original meanings are lost in time, and this was a small portion of a larger project with the package structure retained.
+
+This project shares some code with our previous paper (though certain major changes make the two code bases incompatible):
+
+Wesley Cox, Tim French, Mark Reynolds, Lyndon While. A Genetic Algorithm for Truck Dispatching in Mining. In GCAI 2017 (accepted)
+
+Code available at:
+
+https://github.com/wesleycox/GA-TA-Truck-Dispatching
 #
 Copyright (C) 2017,  Wesley Cox, Lyndon While, Tim French, Mark Reynolds
 
