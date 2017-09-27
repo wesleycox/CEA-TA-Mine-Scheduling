@@ -51,7 +51,7 @@ Next _NCL_ lines:
 
 _NC EM ESD_
 
-where for the nth line, _NC_ is the number of crushers at the nth location, _EM_ is the mean emptying time for each crusher at the nth location, and _ESD_ is the standard deviation.
+where for the nth line, _NC_ is the number of crushers at the nth location, _EM_ is the mean emptying time for crushers at the nth location, and _ESD_ is the standard deviation.
 
 Next line:
 
