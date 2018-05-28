@@ -76,15 +76,13 @@ CoevolutionaryHeterogeneousFitnessFunction<ArrayGenotype,FloatingArrayGenotype> 
 
 		int numOneWay = getNumOneWay();
 
-		// this.dispatchScheduleLength = dispatchScheduleLength;
+		this.dispatchScheduleLength = dispatchScheduleLength;
 		this.defaultLightSchedule = (defaultLightSchedule == null ? (new double[numOneWay][2]) : defaultLightSchedule);
 		if (lightScheduleLengths.length < numOneWay) {
 			throw new IllegalArgumentException(String.format("Schedule lengths need to be specified for all traffic lights: %s length %d",
 				Arrays.toString(lightScheduleLengths),lightScheduleLengths.length));
 		}
-		// this.lightScheduleLengths = lightScheduleLengths;
 		this.lightScheduleLengths = Arrays.copyOf(lightScheduleLengths,numOneWay);
-		this.defaultLightSchedule = defaultLightSchedule;
 
 		lookAhead = 60;
 		numSamples = 1;
@@ -247,9 +245,9 @@ CoevolutionaryHeterogeneousFitnessFunction<ArrayGenotype,FloatingArrayGenotype> 
 				if (scheduled[tid]) {
 					scheduled[tid] = false;
 					numScheduled--;
-					if (numScheduled == 0) {
-						return -1;
-					}
+				}
+				if (numScheduled == 0) {
+					return -1;
 				}
 				return getAssignedRoute(tid);
 			}
@@ -294,7 +292,8 @@ CoevolutionaryHeterogeneousFitnessFunction<ArrayGenotype,FloatingArrayGenotype> 
 				}
 			}
 			double total = 0;
-			endtime = getSimTime() + lookAhead;
+			double simTime = getSimTime();
+			endtime = simTime + lookAhead;
 			for (int i=0; i<numSamples; i++) {
 				reReady();
 				double sample;

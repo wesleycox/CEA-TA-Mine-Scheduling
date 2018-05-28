@@ -191,9 +191,9 @@ public class SingleCrusherFLDispatchWTimerFitnessFunction extends SimFitnessFunc
 				if (scheduled[tid]) {
 					scheduled[tid] = false;
 					numScheduled--;
-					if (numScheduled == 0) {
-						return -1;
-					}
+				}
+				if (numScheduled == 0) {
+					return -1;
 				}
 				return getAssignedRoute(tid);
 			}
@@ -229,7 +229,8 @@ public class SingleCrusherFLDispatchWTimerFitnessFunction extends SimFitnessFunc
 			}
 			genome.getArray(dispatchSchedule);
 			double total = 0;
-			endtime = getSimTime() + lookAhead;
+			double simTime = getSimTime();
+			endtime = simTime + lookAhead;
 			for (int i=0; i<numSamples; i++) {
 				reReady();
 				numAssignments = 0;

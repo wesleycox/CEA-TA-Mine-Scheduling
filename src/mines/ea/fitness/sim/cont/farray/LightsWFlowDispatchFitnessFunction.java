@@ -236,9 +236,9 @@ public class LightsWFlowDispatchFitnessFunction extends SimFitnessFunction4WFlow
 				if (scheduled[tid]) {
 					scheduled[tid] = false;
 					numScheduled--;
-					if (numScheduled == 0) {
-						return -1;
-					}
+				}
+				if (numScheduled == 0) {
+					return -1;
 				}
 				return super.nextRoute(tid);
 			}
@@ -281,7 +281,8 @@ public class LightsWFlowDispatchFitnessFunction extends SimFitnessFunction4WFlow
 				}
 			}
 			double total = 0;
-			endtime = getSimTime() + lookAhead;
+			double simTime = getSimTime();
+			endtime = simTime + lookAhead;
 			for (int i=0; i<numSamples; i++) {
 				reReady();
 				for (int j=0; j<numOneWay; j++) {

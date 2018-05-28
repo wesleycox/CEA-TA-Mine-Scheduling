@@ -43,8 +43,8 @@ public class Main {
 		MineParameters4 params = new MineParameters4Shortest(file);
 		TimeDistribution tgen = new NormalTimes();
 		MineSimulator4 sim = new MineSimulator4(params,tgen);
-		Debugger.setDebug(true);
 		for (int solIndex : solIndexes) {
+			Debugger.setDebug(true);
 			Solution4 sol;
 			System.out.printf("Preparing solution index %d...\n",solIndex);
 			switch (solIndex) {
