@@ -309,8 +309,9 @@ CoevolutionaryHeterogeneousFitnessFunction<ArrayGenotype,FloatingArrayGenotype> 
 						break;
 					}
 					case 2: {
-						simulate(endtime);
-						sample = getCrusherIdleOre(endtime);
+						simulate(1e9);
+						double currentTime = getCurrentTime();
+						sample = getCrusherIdleOre(currentTime) / (currentTime - simTime);
 						break;
 					}
 					default: {

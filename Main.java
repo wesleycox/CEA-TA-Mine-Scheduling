@@ -82,7 +82,7 @@ public class Main {
 				case 20:
 				case 21: {
 					int fitnessIndex = (solIndex - 16) % 3;
-					double lookAheadFactor = (fitnessIndex == 2 ? 2.0 : 1.0);
+					double lookAheadFactor = 1.0;
 					double xoProb = 0.99;
 					CrossoverKind xoKind = CrossoverKind.SINGLE_POINT;
 					double vmProb = 0.01;
@@ -117,7 +117,7 @@ public class Main {
 				case 23:
 				case 24: {
 					int fitnessIndex = (solIndex - 22) % 3;
-					double lookAheadFactor = (fitnessIndex == 2 ? 2.0 : 1.0);
+					double lookAheadFactor = 1.0;
 					double updateInterval = 15;
 					boolean allowDuplicateOffspring = false;
 					int popSize = 100;
@@ -150,7 +150,7 @@ public class Main {
 				case 26:
 				case 27: {
 					int fitnessIndex = (solIndex - 25) % 3;
-					double lookAheadFactor = (fitnessIndex == 2 ? 2.0 : 1.0);
+					double lookAheadFactor = 1.0;
 					int numSamplesF = 20;
 					double xoProbDispatch = 0.99;
 					CrossoverKind xoKindDispatch = CrossoverKind.SINGLE_POINT;
