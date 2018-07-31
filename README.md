@@ -18,7 +18,7 @@ lpsolve.sourceforge.net/5.5
 
 An example main files is provided and can be run as:
 
-java -cp .;classes;lib/lpsolve55.jar Main filename numSamples runtime solIndex...
+java -cp .;classes;lib/lpsolve55j.jar Main filename numSamples runtime solIndex...
 
 	filename	an valid input file path, e.g. input/problemU-1.in
 
